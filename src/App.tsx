@@ -4,29 +4,41 @@ import Button from './Button'
 import { useForm } from 'react-hook-form'
 import { CheckCircleIcon } from '@heroicons/react/20/solid'
 
-const App = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm()
-  const [isValid, setValid] = useState<boolean>(false)
+export type LoginForm = {
+  email: string,
+  password: string
+}
 
-  const onSubmit = (data: any) => {
-    setValid(true)
+const App = () => {
+  const { register, handleSubmit, formState: { errors } } = useForm<LoginForm>()
+  const [isValid, setValid] = useState<boolean>(false)
+  const [isLoading, setLoading] = useState<boolean>(false)
+
+  const onSubmit = (data: LoginForm) => {
+    setLoading(true)
+    setTimeout(() => {
+      setValid(true)
+      setLoading(false)
+    },500)
+    console.log(data)
   }
+
+  const renderSuccessMessage = () => (
+    <div className="sm:mx-auto sm:w-full sm:max-w-sm rounded-md bg-green-50 p-4">
+      <div className="flex">
+        <div className="flex-shrink-0">
+          <CheckCircleIcon className="h-5 w-5 text-green-400" aria-hidden="true" />
+        </div>
+        <div className="ml-3">
+          <p className="text-sm font-medium text-green-800">Success!</p>
+        </div>
+      </div>
+    </div>
+  )
 
   return (
     <div className="h-screen bg-gray-900 flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-
-      {isValid && (
-        <div className="sm:mx-auto sm:w-full sm:max-w-sm rounded-md bg-green-50 p-4">
-        <div className="flex">
-          <div className="flex-shrink-0">
-            <CheckCircleIcon className="h-5 w-5 text-green-400" aria-hidden="true" />
-          </div>
-          <div className="ml-3">
-            <p className="text-sm font-medium text-green-800">Successfully LoggedIn</p>
-          </div>
-        </div>
-      </div>
-      )}
+      {isValid && renderSuccessMessage()}
 
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
         <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white">
@@ -79,6 +91,7 @@ const App = () => {
             <Button
               type={"submit"}
               text={"Sign in"}
+              isLoading={isLoading}
             />
           </div>
         </form>

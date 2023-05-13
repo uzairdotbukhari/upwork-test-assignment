@@ -51,7 +51,7 @@ const InputField = (props: IInputField) => {
                     className={`block w-full rounded-md border-0 bg-white/5 px-2 py-1.5 text-white shadow-sm sm:text-sm sm:leading-6`}
                 />
             </div>
-            <p className="mt-2 text-red-600">{error?.toString()}</p>
+            <p className="mt-2 text-red-600">{error?.toString() ?? ""}</p>
         </div>
     )
 }
