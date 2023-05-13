@@ -1,46 +1,37 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Coding Challenge: React TypeScript Login Component
 
-## Available Scripts
+## Objective
 
-In the project directory, you can run:
+Your task is to create a login component using React, TypeScript, and Tailwind CSS. This component should include fields for email and password, as well as a submit button.
 
-### `npm start`
+## Requirements
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1.  **React & TypeScript:** Your component should be built using React and TypeScript. Make sure to utilize TypeScript's features to add type definitions where necessary.
+    
+2.  **Form Validation:** Implement basic form validation:
+    
+    -   The email field should validate for a correct email format.
+    -   The password field should require at least 8 characters.
+    -   Display a relevant error message under the corresponding field if the input is invalid.
+3.  **Tailwind CSS:** Use Tailwind CSS to style your component. Strive for a modern, clean look. The component should be responsive and look good on both desktop and mobile screens.
+    
+4.  **Submit Button:** Upon clicking the 'Submit' button, if the form input is valid, display a success message on the screen. If the form input is invalid, prevent form submission and show an appropriate error message.
+    
+5.  **Code Quality:** Your code should be clean, well-organized, and easy to understand. Proper use of hooks, state management, and conditional rendering is expected.
+    
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Submission Guidelines
 
-### `npm test`
+-   Submit your code by creating a creating a zip file of your project. Do not include the node_modules folder.
+-   Include instructions for running your project in the README.md of your repository.
+-   Include any additional notes about your project or any assumptions you made while completing the task.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Evaluation Criteria
 
-### `npm run build`
+-   Functionality: Does the application do what was asked?
+-   Code Quality: Is the code understandable and maintainable?
+-   Error handling: Does the application handle potential errors gracefully?
+-   Design: Is the application easy to use and visually appealing?
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+We look forward to seeing your solution. Good luck!
